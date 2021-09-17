@@ -1,8 +1,10 @@
 # laravel-admin-ext-vditor
 
-##install##
+
+## install ##
 composer require ipear/laravel-admin-ext-vditor
 php artisan vendor:publish --tag=laravel-admin-ext-vditor
 
-##usage##
+
+## usage ##
 $form->vditor('content', 'title');
