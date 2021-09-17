@@ -3,5 +3,8 @@
         {{$label}}
     </label>
     <br>
-    <div id="problem-content-vditor-{{$id}}">{{$value}}</div>
+    <div id="{{$id}}">
+        <textarea name={{$column}} style="display:none;">{{$value}}</textarea>
+        <div id="problem-content-vditor-{{$id}}"></div>
+    </div>
 </div>
