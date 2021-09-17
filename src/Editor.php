@@ -17,7 +17,7 @@ class Editor extends Field
     public function render()
     {
         $sign = $this->formatName($this->column);
-
+        $config = config('admin.extensions.vditor.edit-config') ?? '{cache:{enable:false}}';
         $this->script = <<<EOT
 
         var Vditor{$this->id};
@@ -28,7 +28,6 @@ class Editor extends Field
         }
 
         $(document).ready(function(){
-
             var form_element=document.getElementById("vditor-{$this->id}");
             while(form_element!==null){
                 if(form_element.tagName!="FORM"){
@@ -40,12 +39,10 @@ class Editor extends Field
             if(form_element!==null){
                 form_element.onsubmit=submitMarkdown{$this->id};
             }
-
             Vditor{$this->id} = new Vditor(
                 document.getElementById("vditor-{$this->id}"),
-                {cache: {enable: false}}
+                {$config}
             );
-
         });
 EOT;
         return parent::render();
