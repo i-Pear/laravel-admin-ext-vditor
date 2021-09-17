@@ -4,7 +4,6 @@
     </label>
     <br>
     <div id="{{$id}}">
-        <textarea name={{$column}} style="display:none;">{{$value}}</textarea>
-        <div id="problem-content-vditor-{{$id}}"></div>
+        <textarea name="{{$column}}" id="vditor-{{$id}}" style="display:none;">{{$value}}</textarea>
     </div>
 </div>

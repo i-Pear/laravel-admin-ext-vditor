@@ -23,7 +23,7 @@ class Editor extends Field
         var Vditor{$this->id};
         $(document).ready(function(){
             Vditor{$this->id} = new Vditor(
-                document.getElementById("problem-content-vditor-{$this->id}"),
+                document.getElementById("vditor-{$this->id}"),
                 {cache: {enable: false}}
             );
         });
