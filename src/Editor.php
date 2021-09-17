@@ -21,11 +21,31 @@ class Editor extends Field
         $this->script = <<<EOT
 
         var Vditor{$this->id};
+
+        function submitMarkdown{$this->id}(){
+            document.getElementById("vditor-data-{$this->id}").value=Vditor{$this->id}.getValue();
+            return true;
+        }
+
         $(document).ready(function(){
+
+            var form_element=document.getElementById("vditor-{$this->id}");
+            while(form_element!==null){
+                if(form_element.tagName!="FORM"){
+                    form_element=form_element.parentElement;
+                }else{
+                    break;
+                }
+            }
+            if(form_element!==null){
+                form_element.onsubmit=submitMarkdown{$this->id};
+            }
+
             Vditor{$this->id} = new Vditor(
                 document.getElementById("vditor-{$this->id}"),
                 {cache: {enable: false}}
             );
+
         });
 EOT;
         return parent::render();

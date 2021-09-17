@@ -3,7 +3,6 @@
         {{$label}}
     </label>
     <br>
-    <div id="{{$id}}">
-        <textarea name="{{$column}}" id="vditor-{{$id}}" style="display:none;">{{$value}}</textarea>
-    </div>
+    <textarea id="vditor-data-{{$id}}" name="{{$column}}" style="display:none;"></textarea>
+    <div id="vditor-{{$id}}">{{$value}}</div>
 </div>
