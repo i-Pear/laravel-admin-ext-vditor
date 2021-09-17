@@ -23,7 +23,7 @@
   },
   "autoload": {
     "psr-4": {
-      "i-Pear\\Vditor\\": "src/"
+      "iPear\\Vditor\\": "src/"
     }
   },
   "extra": {
