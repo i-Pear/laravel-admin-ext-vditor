@@ -1,0 +1,36 @@
+{
+  "name": "ipear/laravel-admin-ext-vditor",
+  "description": "Vditor(V.3.8.6) for laravel-admin.",
+  "type": "library",
+  "keywords": [
+    "laravel-admin",
+    "extension"
+  ],
+  "homepage": "https://github.com/i-Pear/laravel-admin-ext-vditor",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "iPear",
+      "email": "i.pear@outlook.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "encore/laravel-admin": "~1.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "i-Pear\\Vditor\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "iPear\\Vditor\\VditorServiceProvider"
+      ]
+    }
+  }
+}
