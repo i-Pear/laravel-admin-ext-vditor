@@ -19,11 +19,12 @@ class Editor extends Field
         $sign = $this->formatName($this->column);
 
         $this->script = <<<EOT
+
         var Vditor{$this->id};
         $(document).ready(function(){
-            Vditor{$this->id} = Vditor.preview(
+            Vditor{$this->id} = new Vditor(
                 document.getElementById("problem-content-vditor-{$this->id}"),
-                document.getElementById("problem-content-vditor-{$this->id}").innerHTML
+                {cache: {enable: false}}
             );
         });
 EOT;
