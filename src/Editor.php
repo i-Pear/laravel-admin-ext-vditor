@@ -8,10 +8,10 @@ class Editor extends Field
 {
     protected $view = 'laravel-admin-ext-vditor::editor';
     protected static $css = [
-        'vendor/laravel-admin-ext/vditor/vditor/index.css'
+        'vendor/laravel-admin-ext/vditor/vditor@3.8.7/dist/index.css'
     ];
     protected static $js = [
-        'vendor/laravel-admin-ext/vditor/vditor/index.min.js'
+        'vendor/laravel-admin-ext/vditor/vditor@3.8.7/dist/index.min.js'
     ];
 
     public function render()
